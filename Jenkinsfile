@@ -15,10 +15,10 @@ pipeline {
         }
       }
     }
-    stage ("Copiando los archivos") {
-      steps {
-        sh "scp -i /var/jenkins_home/sshkey/claveCli /var/jenkins_home/workspace/prueba/web/* ivan@10.0.2.15:/home/ivan/Escritorio/deploy"
-      }
-    }
+    // stage ("Copiando los archivos") {
+    //   steps {
+    //     sh "scp -i /var/jenkins_home/sshkey/claveCli /var/jenkins_home/workspace/test/web/* ivan@10.0.2.15:/home/ivan/Escritorio/deploy"
+    //   }
+    // }
   }
 }
