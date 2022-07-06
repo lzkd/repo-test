@@ -15,6 +15,16 @@ pipeline {
         }
       }
     }
+    stage ("build image"){
+      steps {
+        sh "docker build -t test_image ."
+      }
+    }
+    stage ("run image"){
+      steps {
+        sh "docker run test_image"
+      }
+    }
     // stage ("Copiando los archivos") {
     //   steps {
     //     sh "scp -i /var/jenkins_home/sshkey/claveCli /var/jenkins_home/workspace/test/web/* ivan@10.0.2.15:/home/ivan/Escritorio/deploy"
